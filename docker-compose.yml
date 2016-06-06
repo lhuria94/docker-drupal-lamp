@@ -1,0 +1,27 @@
+
+#
+# Minimal Drupal 7.x development environment.
+#
+
+version: '2'
+services:
+    web:
+        image: "your_image_name:latest"
+        working_dir: "/var/www/html"
+        volumes:
+            - /path/to/working/directory:/var/www/html
+        links:
+            - "db"
+        ports:
+            - "80"
+    db:
+        image: "mysql:latest"
+        environment:
+            - MYSQL_ROOT_PASSWORD=root
+            - MYSQL_USER=root
+            - MYSQL_PASSWORD=
+            - MYSQL_DATABASE=drupal7
+        volumes:
+            - ".:/var/www/html"
+        ports:
+            - "3306"
