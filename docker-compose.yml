@@ -6,7 +6,7 @@
 version: '2'
 services:
     web:
-        build: ../../lamp-stack
+        build: ./lamp-stack
         image: "your_image_name:latest"
         working_dir: "/var/www/html"
         volumes:
