@@ -1,5 +1,5 @@
 # docker-drupal-lamp
-This is a standard Drupal docker lamp stack.
+Minimal Drupal 7.x development environment stack.
 
 Basic uses:
 1. Place a copy of this file at your Drupal site root.
