@@ -13,7 +13,6 @@ RUN apt-get install -y php5-gd
 RUN apt-get install -y php5-curl
 RUN apt-get install -y libapache2-mod-php5
 RUN apt-get install -y curl
-RUN apt-get install -y mysql-server
 RUN apt-get install -y mysql-client
 RUN apt-get install -y openssh-server
 RUN apt-get install -y wget
@@ -29,6 +28,7 @@ RUN wget https://github.com/drush-ops/drush/releases/download/8.1.2/drush.phar &
 # Setup PHP.
 RUN sed -i 's/display_errors = Off/display_errors = On/' /etc/php5/apache2/php.ini
 RUN sed -i 's/display_errors = Off/display_errors = On/' /etc/php5/cli/php.ini
+RUN usermod -u 1000 www-data
 # Setup Apache.
 # In order to run our Simpletest tests, we need to make Apache
 # listen on the same port as the one we forwarded. Because we use
