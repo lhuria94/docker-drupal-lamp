@@ -1,5 +1,4 @@
 # docker-drupal-lamp
-<<<<<<< HEAD
 Minimal Drupal 7.x development environment stack. <br/>
 
 Basic uses:<br/>
