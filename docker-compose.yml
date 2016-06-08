@@ -6,7 +6,7 @@
 version: '2'
 services:
     web:
-        build: ./lamp-stack
+        build: ../../lamp-stack
         image: "your_image_name:latest"
         working_dir: "/var/www/html"
         volumes:
@@ -20,9 +20,16 @@ services:
         environment:
             - MYSQL_ROOT_PASSWORD=root
             - MYSQL_USER=root
-            - MYSQL_PASSWORD=
-            - MYSQL_DATABASE=sai
+            - MYSQL_PASSWORD=root
+            - MYSQL_DATABASE=your_db_name_to_be_create
         volumes:
             - ".:/var/www/html"
         ports:
             - "3306"
+    drush:
+        image: "mparker17/mush"
+        working_dir: "/var/www/html"
+        volumes:
+            - ".:/var/www/html"
+        links:
+            - "db"
