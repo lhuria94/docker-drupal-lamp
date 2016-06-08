@@ -12,7 +12,7 @@ services:
         volumes:
             - /path/to/working/directory:/var/www/html
         links:
-            - "db"
+i            - "db"
         ports:
             - "80"
     db:
@@ -30,6 +30,6 @@ services:
         image: "mparker17/mush"
         working_dir: "/var/www/html"
         volumes:
-            - ".:/var/www/html"
+            - /path/to/working/directory:/var/www/html
         links:
             - "db"
