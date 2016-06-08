@@ -13,14 +13,14 @@ How to use:<br/>
 
 5. To get inside the container using bash: 'docker-compose exec web bash'<br/>
 
-6. For new installation:
+6. <b><i>For new installation:</i></b>
 Add Database setup instructions while installing Drupal:
-- Database name = 'your_db_name'<br/>
-- Database username = 'root'<br/>
-- Leave database password blank<br/>
-- Expand "Advanced options" and set Database host = 'db' (This is defined in docker-compose.yml file)<br/>
+  - Database name = 'your_db_name'<br/>
+  - Database username = 'root'<br/>
+  - Leave database password blank<br/>
+  - Expand "Advanced options" and set Database host = 'db' (This is defined in docker-compose.yml file)<br/>
 
-7. For existing installation:
+7. <b><i>For existing installation:</i></b>
 Import Database using:<br/>
 docker exec -i your_db_container mysql -uroot -proot your_db_name < filename.sql
 
