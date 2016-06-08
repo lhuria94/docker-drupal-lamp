@@ -2,6 +2,7 @@
 Minimal Drupal 7.x development environment stack. <br/>
 
 How to use:<br/>
+
 1. Place a copy of this docker-compose.yml file at your Drupal site root or maybe create a folder "docker/".<br/>
 
 2. Build the image using 'docker build -t your_image_name .'<br/>
