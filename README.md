@@ -26,3 +26,7 @@ docker exec -i your_db_container mysql -uroot -proot your_db_name < filename.sql
 
 8. Make necessary changes in settings.php
 
+9. # Run Drush commands with:<br/>
+#USER_ID=$(id -u) docker-compose run --rm drush $rest_of_drush_command
+
+
