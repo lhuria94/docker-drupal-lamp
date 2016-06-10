@@ -12,7 +12,7 @@ services:
         volumes:
             - /path/to/working/directory:/var/www/html
         links:
-i            - "db"
+            - "db"
         ports:
             - "80"
     db:
